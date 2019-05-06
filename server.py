@@ -1,4 +1,3 @@
-
 from anthill.common.options import options
 
 from anthill.common.server import Server, init, start
@@ -6,10 +5,10 @@ from anthill.common.access import AccessToken, public
 from anthill.common.keyvalue import KeyValueStorage
 from anthill.common.database import Database
 
-from . import handler as h
-from . import admin
-from . import options as _opts
-from . model.blog import BlogsModel
+from blog import handler as h
+from blog import admin
+from blog import options as _opts
+from blog.model.blog import BlogsModel
 
 
 class BlogServer(Server):

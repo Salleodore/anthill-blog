@@ -1,4 +1,3 @@
-
 from anthill.common.options import define
 
 # Main
