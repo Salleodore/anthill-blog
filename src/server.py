@@ -5,16 +5,16 @@ from anthill.common.access import AccessToken, public
 from anthill.common.keyvalue import KeyValueStorage
 from anthill.common.database import Database
 
-from blog import handler as h
-from blog import admin
-from blog import options as _opts
-from blog.model.blog import BlogsModel
+import handler as h
+import admin as a
+import options as _opts
+from model.blog import BlogsModel
 
 
 class BlogServer(Server):
     # noinspection PyShadowingNames
     def __init__(self):
-        super(BlogServer, self).__init__()
+        super().__init__()
 
         self.db = Database(
             host=options.db_host,
@@ -32,12 +32,12 @@ class BlogServer(Server):
 
     def get_admin(self):
         return {
-            "index": admin.RootAdminController,
-            "new_blog": admin.NewBlogAdminController,
-            "blog": admin.BlogAdminController,
-            "blog_settings": admin.BlogSettingsAdminController,
-            "new_blog_entry": admin.NewBlogEntryAdminController,
-            "blog_entry": admin.BlogEntryAdminController
+            "index": a.RootAdminController,
+            "new_blog": a.NewBlogAdminController,
+            "blog": a.BlogAdminController,
+            "blog_settings": a.BlogSettingsAdminController,
+            "new_blog_entry": a.NewBlogEntryAdminController,
+            "blog_entry": a.BlogEntryAdminController
         }
 
     def get_models(self):

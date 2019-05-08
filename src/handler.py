@@ -4,7 +4,7 @@ from anthill.common.handler import AuthenticatedHandler
 from anthill.common.access import scoped, AccessToken
 from anthill.common import to_int
 
-from blog.model.blog import BlogNotFound, BlogError
+from model.blog import BlogNotFound, BlogError
 
 
 class BlogsHandler(AuthenticatedHandler):

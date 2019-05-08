@@ -1,7 +1,7 @@
 from anthill.common.validate import validate
 from anthill.common import admin as a, update
 
-from blog.model.blog import BlogNotFound, BlogError
+from model.blog import BlogNotFound, BlogError
 
 import ujson
 import collections
